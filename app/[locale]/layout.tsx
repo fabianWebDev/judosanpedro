@@ -2,6 +2,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { notFound } from "next/navigation";
 import { Locale, locales } from "@/data/i18n";
+import MainFrame from "@/components/layout/MainFrame";
 
 type Props = {
   children: React.ReactNode;
@@ -16,10 +17,12 @@ export default async function LocaleLayout({ children, params }: Props) {
   }
 
   return (
-    <html lang={locale}>
+    <html lang={locale} className="scroll-smooth">
       <body>
         <Navbar locale={locale as Locale} />
-        {children}
+        <MainFrame>
+          {children}
+        </MainFrame>
       </body>
     </html>
   );

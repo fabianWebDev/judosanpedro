@@ -9,8 +9,8 @@ export default async function About({ params }: Props) {
     const t = i18n[locale as Locale];
 
     return (
-        <div>
+        <>
             <h1>{t.about}</h1>
-        </div>
+        </>
     )
 }
