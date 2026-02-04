@@ -1,8 +1,8 @@
 export const senseis = [
     {
         slug: "david-fernandez",
-        name: "David Fernández Tercero",
-        shortDescription: "David Fernández Tercero es un referente del judo costarricense. Representó a Costa Rica en los Juegos Olímpicos de Atenas 2004, donde además tuvo el honor de portar la bandera nacional durante la ceremonia de inauguración.",
+        name: "David Fernández",
+        shortDescription: "David Fernández Tercero es un referente del judo costarricense. Representó a Costa Rica en los Juegos Olímpicos de Atenas 2004.",
         fullDescription: "David Fernández Tercero es un referente del judo costarricense. Representó a Costa Rica en los Juegos Olímpicos de Atenas 2004, donde además tuvo el honor de portar la bandera nacional durante la ceremonia de inauguración.\n\nEn el plano internacional ha competido en Copas del Mundo (La Habana, Budapest, París), Grand Prix y Campeonatos Panamericanos. Obtuvo medalla de bronce en los Juegos Panamericanos de Río 2007 y plata en el Abierto Panamericano de Miami 2006. A nivel regional es múltiple campeón centroamericano y ha sido nueve veces campeón nacional absoluto.\n\nCinturón negro 5º dan desde 2018, hoy dedica su experiencia a la formación de jóvenes judocas en el dojo.",
         image: "/sensei_david.jpg",
         badgeLabel: "Sensei Principal",

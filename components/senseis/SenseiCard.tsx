@@ -41,37 +41,25 @@ export default function SenseiCard({
             </div>
 
             {/* Texto */}
-            <div className="p-5">
-                <h2 className="mb-1 text-xl font-semibold tracking-tight text-zinc-900">
+            <div className="p-2 md:p-4">
+                <h2 className="mb-1 text-xl font-semibold tracking-tight text-zinc-900 line-clamp-1">
                     {name}
                 </h2>
 
-                {/* Stat principal */}
-                {mainStat && (
-                    <p className="mb-3 flex items-center gap-2 text-sm font-medium text-zinc-900">
-                        <span className="text-base">🥋</span>
-                        {mainStat.value} {mainStat.label.toLowerCase()}
-                    </p>
-                )}
-
-                {/* Stats secundarios */}
-                {secondaryStats.length > 0 && (
-                    <div className="mb-4 flex flex-wrap gap-x-4 gap-y-1 text-xs text-zinc-600">
-                        {secondaryStats.map((stat) => (
-                            <span key={stat.label}>
-                                {stat.value} {stat.label.toLowerCase()}
-                            </span>
-                        ))}
-                    </div>
-                )}
-
-                <p className="text-sm leading-relaxed text-zinc-600">
+                <p className="line-clamp-2 text-sm leading-relaxed text-zinc-600">
                     {shortDescription}
                 </p>
 
                 <Link
                     href={`/${locale}/senseis/${slug}`}
-                    className="mt-3 inline-block text-sm font-medium text-zinc-900 underline underline-offset-2 hover:no-underline focus:outline-none focus:ring-2 focus:ring-zinc-400 focus:ring-offset-2 rounded"
+                    className="
+                                mt-4 inline-flex w-full items-center justify-center
+                                rounded-xl bg-zinc-900 px-4 py-2
+                                text-sm font-medium text-white
+                                transition
+                                hover:bg-zinc-800
+                                focus:outline-none focus:ring-2 focus:ring-zinc-400 focus:ring-offset-2
+                                text-center"
                 >
                     {seeMoreLabel}
                 </Link>

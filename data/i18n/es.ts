@@ -1,4 +1,5 @@
 export const es = {
+    ourSenseisTitle: "Nuestros Senseis",
     senseis: "Senseis",
     about: "Sobre nosotros",
     home: "Inicio",
