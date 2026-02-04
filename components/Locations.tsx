@@ -1,6 +1,6 @@
 export default function Location() {
   return (
-    <section id="ubicacion" className="w-full max-w-5xl mx-auto px-4 py-6 sm:px-6 sm:py-8 md:px-8 md:py-10">
+    <section id="ubicacion" className="w-full max-w-7xl mx-auto px-4 py-6 sm:px-6 sm:py-8 md:px-8 md:py-10">
       <h1 className="text-2xl font-bold mb-3 sm:text-3xl sm:mb-4 md:text-4xl">
         Ubicación
       </h1>

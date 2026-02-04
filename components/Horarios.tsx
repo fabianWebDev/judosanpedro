@@ -1,36 +1,76 @@
+"use client";
+
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { horarios } from "@/data/horarios/horarios";
 
 export default function Horarios() {
+    const [diaActivo, setDiaActivo] = useState(horarios[0].dia);
+
+    const dia = horarios.find(d => d.dia === diaActivo);
+
+    if (!dia) return null;
+
     return (
-        <main id="horarios" className="w-full max-w-5xl mx-auto px-4 py-6 sm:px-6 sm:py-8 md:px-8 md:py-10">
+        <main
+            id="horarios"
+            className="w-full max-w-7xl mx-auto px-4 py-6 sm:px-6 sm:py-8 md:px-8 md:py-10"
+        >
             <h1 className="text-3xl font-bold mb-6">Horarios</h1>
 
-            <div className="overflow-x-auto">
-                <table className="w-full border border-zinc-200">
-                    <thead className="bg-zinc-100">
-                        <tr>
-                            <th className="p-3 text-left">Día</th>
-                            <th className="p-3 text-left">Horario</th>
-                            <th className="p-3 text-left">Grupo</th>
-                            <th className="p-3 text-left">Nivel</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {horarios.map((dia) =>
-                            dia.bloques.map((bloque, i) => (
-                                <tr key={`${dia.dia}-${i}`} className="border-t border-zinc-200">
-                                    <td className="p-3 font-medium">
-                                        {i === 0 ? dia.dia : ""}
-                                    </td>
-                                    <td className="p-3">{bloque.hora}</td>
-                                    <td className="p-3">{bloque.grupo}</td>
-                                    <td className="p-3">{bloque.nivel}</td>
-                                </tr>
-                            ))
-                        )}
-                    </tbody>
-                </table>
+            <div className="flex gap-2 overflow-x-auto pb-2 mb-6">
+                {horarios.map(d => (
+                    <button
+                        key={d.dia}
+                        onClick={() => setDiaActivo(d.dia)}
+                        className={`
+              px-4 py-2 rounded-full whitespace-nowrap text-sm font-medium
+              transition
+              ${diaActivo === d.dia
+                                ? "bg-zinc-900 text-white"
+                                : "bg-zinc-100 text-zinc-700 hover:bg-zinc-200"
+                            }
+            `}
+                    >
+                        {d.dia}
+                    </button>
+                ))}
             </div>
+
+            <section className="space-y-4">
+                <AnimatePresence mode="wait">
+                    <motion.section
+                        key={diaActivo}
+                        initial={{ opacity: 0, y: 8 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -8 }}
+                        transition={{ duration: 0.15, ease: "easeOut" }}
+                        className="space-y-4"
+                    >
+                        {dia.bloques.map((bloque, i) => (
+                            <article
+                                key={i}
+                                className="border border-zinc-200 rounded-xl p-4 grid gap-2 sm:grid-cols-3"
+                            >
+                                <div>
+                                    <span className="block text-xs text-zinc-500">Horario</span>
+                                    <span className="font-semibold">{bloque.hora}</span>
+                                </div>
+
+                                <div>
+                                    <span className="block text-xs text-zinc-500">Grupo</span>
+                                    <span>{bloque.grupo}</span>
+                                </div>
+
+                                <div>
+                                    <span className="block text-xs text-zinc-500">Nivel</span>
+                                    <span>{bloque.nivel}</span>
+                                </div>
+                            </article>
+                        ))}
+                    </motion.section>
+                </AnimatePresence>
+            </section>
         </main>
-    )
+    );
 }

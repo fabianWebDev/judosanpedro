@@ -2,7 +2,9 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { i18n, Locale } from "@/data/i18n";
+import Image from "next/image";
 
 type Props = {
   locale: Locale;
@@ -10,6 +12,7 @@ type Props = {
 
 export default function Navbar({ locale }: Props) {
   const t = i18n[locale];
+  const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
   const links = [
@@ -20,23 +23,57 @@ export default function Navbar({ locale }: Props) {
     { href: `/${locale}#ubicacion`, label: t.ubicacion },
   ];
 
-  return (
-    <nav className="bg-zinc-100">
-      <div className="mx-auto flex max-w-7xl items-center justify-between p-4">
-        <span className="font-semibold text-zinc-900">Judo San Pedro</span>
+  const isActive = (href: string) => {
+    if (href.includes("#")) return false;
+    return pathname === href;
+  };
 
-        <div className="hidden md:flex gap-6">
-          {links.map(link => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="text-zinc-900 hover:text-zinc-600 transition"
-            >
-              {link.label}
-            </Link>
-          ))}
+  return (
+    <nav className="bg-zinc-100 border-b border-zinc-200">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-5">
+        {/* Logo */}
+        <Link href={`/${locale}`} className="flex items-center gap-3">
+          <Image
+            src="/logo.png"
+            alt="Judo San Pedro"
+            width={56}
+            height={56}
+            priority
+          />
+          <span className="text-zinc-900 font-semibold text-lg tracking-tight">
+            Judo San Pedro
+          </span>
+        </Link>
+
+        {/* Desktop nav */}
+        <div className="hidden md:flex gap-8">
+          {links.map(link => {
+            const active = isActive(link.href);
+
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`
+                  relative text-sm font-semibold tracking-wide
+                  transition-colors
+                  ${active
+                    ? "text-zinc-900"
+                    : "text-zinc-600 hover:text-zinc-900"
+                  }
+                `}
+              >
+                {link.label}
+
+                {active && (
+                  <span className="absolute -bottom-1 left-0 h-[2px] w-full bg-zinc-900 rounded-full" />
+                )}
+              </Link>
+            );
+          })}
         </div>
 
+        {/* Mobile button */}
         <button
           onClick={() => setOpen(!open)}
           className="md:hidden text-zinc-900"
@@ -58,6 +95,7 @@ export default function Navbar({ locale }: Props) {
         </button>
       </div>
 
+      {/* Mobile menu */}
       {open && (
         <div className="md:hidden border-t border-zinc-200 bg-zinc-100">
           <div className="flex flex-col p-4 gap-4">
@@ -66,7 +104,7 @@ export default function Navbar({ locale }: Props) {
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="text-zinc-900 hover:text-zinc-600"
+                className="text-zinc-800 font-semibold"
               >
                 {link.label}
               </Link>

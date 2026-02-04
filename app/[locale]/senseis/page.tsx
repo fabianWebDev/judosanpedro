@@ -13,11 +13,21 @@ export default async function Senseis({ params }: Props) {
     return (
         <>
             <h1>{t.senseis}</h1>
-            <div className="flex flex-wrap gap-6 justify-center">  
-                {senseis.map((sensei) => (
-                    <SenseiCard key={sensei.name} name={sensei.name} description={sensei.description} image={sensei.image} />
+            <div className="grid grid-cols-2 gap-2 md:gap-6 lg:grid-cols-3 justify-items-center px-4">
+                {senseis.filter((s): s is NonNullable<typeof s> & { slug: string } => s != null && "slug" in s).map((sensei, index) => (
+                    <SenseiCard
+                        key={sensei.slug}
+                        name={sensei.name}
+                        shortDescription={sensei.shortDescription}
+                        image={sensei.image}
+                        badgeLabel={sensei.badgeLabel}
+                        stats={sensei.stats}
+                        seeMoreLabel={t.commom?.seeMore ?? ""}
+                        slug={sensei.slug}
+                        locale={locale}
+                    />
                 ))}
             </div>
         </>
-    )
+    );
 }

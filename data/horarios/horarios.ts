@@ -7,7 +7,25 @@ export const horarios = [
         ],
     },
     {
+        dia: "Martes",
+        bloques: [
+            { hora: "6:00 – 7:30 pm", grupo: "Adultos", nivel: "Intermedio" },
+        ],
+    },
+    {
         dia: "Miércoles",
+        bloques: [
+            { hora: "6:00 – 7:30 pm", grupo: "Adultos", nivel: "Intermedio" },
+        ],
+    },
+    {
+        dia: "Jueves",
+        bloques: [
+            { hora: "6:00 – 7:30 pm", grupo: "Adultos", nivel: "Intermedio" },
+        ],
+    },
+    {
+        dia: "Viernes",
         bloques: [
             { hora: "6:00 – 7:30 pm", grupo: "Adultos", nivel: "Intermedio" },
         ],
