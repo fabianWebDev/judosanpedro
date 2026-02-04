@@ -6,7 +6,7 @@ export const en = {
     ubicacion: "Location",
     heroText: "Tradition and discipline",
     aboutSenseis: "About our Senseis",
-    commom: {	
-       moreInfo: "More information",
+    commom: {
+        moreInfo: "More information",
     },
 };

@@ -6,8 +6,8 @@ export default function Horarios() {
             <h1 className="text-3xl font-bold mb-6">Horarios</h1>
 
             <div className="overflow-x-auto">
-                <table className="w-full border border-zinc-200 dark:border-zinc-700">
-                    <thead className="bg-zinc-100 dark:bg-zinc-900">
+                <table className="w-full border border-zinc-200">
+                    <thead className="bg-zinc-100">
                         <tr>
                             <th className="p-3 text-left">Día</th>
                             <th className="p-3 text-left">Horario</th>
@@ -18,7 +18,7 @@ export default function Horarios() {
                     <tbody>
                         {horarios.map((dia) =>
                             dia.bloques.map((bloque, i) => (
-                                <tr key={`${dia.dia}-${i}`} className="border-t dark:border-zinc-700">
+                                <tr key={`${dia.dia}-${i}`} className="border-t border-zinc-200">
                                     <td className="p-3 font-medium">
                                         {i === 0 ? dia.dia : ""}
                                     </td>

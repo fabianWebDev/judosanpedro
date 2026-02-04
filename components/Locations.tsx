@@ -5,7 +5,7 @@ export default function Location() {
         Ubicación
       </h1>
 
-      <p className="mb-4 text-sm text-zinc-600 dark:text-zinc-400 sm:text-base sm:mb-6 md:mb-8">
+      <p className="mb-4 text-sm text-zinc-600 sm:text-base sm:mb-6 md:mb-8">
         Nos encontramos en nuestras instalaciones, listas para recibirte en el tatami.
       </p>
 

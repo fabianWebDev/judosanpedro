@@ -11,7 +11,7 @@ export default async function Hero({ params }: Props) {
 
     return (
         <section className="w-full px-4 py-6 sm:px-6 sm:py-8 md:px-8 md:py-10">
-            <div className="relative mx-auto max-w-5xl overflow-hidden rounded-2xl shadow-2xl ring-1 ring-zinc-200/50 dark:ring-zinc-700/30 sm:rounded-3xl">
+            <div className="relative mx-auto max-w-5xl overflow-hidden rounded-2xl shadow-2xl ring-1 ring-zinc-200/50 sm:rounded-3xl">
                 <div className="relative aspect-[21/9] min-h-[200px] sm:aspect-[3/1] sm:min-h-[240px] md:min-h-[280px] lg:min-h-[320px]">
                     <Image
                         src="/hero.jpeg"

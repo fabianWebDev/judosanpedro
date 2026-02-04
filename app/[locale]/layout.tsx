@@ -17,7 +17,7 @@ export default async function LocaleLayout({ children, params }: Props) {
   }
 
   return (
-    <html lang={locale} className="scroll-smooth">
+    <html lang={locale} className="scroll-smooth light" suppressHydrationWarning>
       <body>
         <Navbar locale={locale as Locale} />
         <MainFrame>

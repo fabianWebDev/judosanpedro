@@ -18,8 +18,7 @@ export default async function AboutSenseis({ params }: Props) {
                 href={`/${locale}/senseis`}
                 className="inline-flex items-center justify-center
              rounded-md px-4 py-2
-             bg-zinc-900 dark:bg-zinc-100
-             text-zinc-100 dark:text-zinc-900
+             bg-zinc-900 text-zinc-100
              hover:opacity-90 transition"
             >
                 {t.commom.moreInfo}
