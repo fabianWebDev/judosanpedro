@@ -13,7 +13,7 @@ export default async function AboutSenseis({ params }: Props) {
     return (
         <section id="about-senseis" className="w-full max-w-7xl mx-auto px-4 py-6 sm:px-6 sm:py-8 md:px-8 md:py-10">
             <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-stretch">
-                <div className="w-fit shrink-0">
+                <div className="w-fit shrink-0 mx-auto md:mx-0">
                     <div className="relative overflow-hidden">
                         <Image
                             src="/sensei_david.jpg"

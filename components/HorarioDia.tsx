@@ -6,6 +6,7 @@ type Bloque = {
     hora: string;
     grupo: string;
     nivel: string;
+    instructor: string;
 };
 
 type Props = {
@@ -44,6 +45,7 @@ export function HorarioDia({ dia, bloques }: Props) {
                             <span className="text-stone-600 tabular-nums">{bloque.hora}</span>
                             <span className="text-stone-700">{bloque.grupo}</span>
                             <span className="text-stone-600">{bloque.nivel}</span>
+                            <span className="text-stone-600">{bloque.instructor}</span>
                         </div>
                     ))}
                 </div>

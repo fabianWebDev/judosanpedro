@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { FiClock, FiUsers, FiBarChart2, FiUser } from "react-icons/fi";
 import { horarios } from "@/data/horarios/horarios";
 
 export default function Horarios() {
@@ -50,21 +51,37 @@ export default function Horarios() {
                         {dia.bloques.map((bloque, i) => (
                             <article
                                 key={i}
-                                className="border border-zinc-200 rounded-sm p-4 grid gap-2 sm:grid-cols-3"
+                                className="border border-zinc-200 rounded-sm p-4 grid gap-2 sm:grid-cols-4 "
                             >
                                 <div>
-                                    <span className="block text-xs text-zinc-500">Horario</span>
-                                    <span className="font-semibold">{bloque.hora}</span>
+                                    <div className="flex items-baseline gap-2">
+                                        <FiClock className="text-zinc-500 shrink-0" size={16} aria-hidden />
+                                        <span className="text-md font-light text-zinc-500">Horario</span>
+                                    </div>
+                                    <span className="block font-semibold mt-0.5">{bloque.hora}</span>
                                 </div>
 
                                 <div>
-                                    <span className="block text-xs text-zinc-500">Grupo</span>
-                                    <span>{bloque.grupo}</span>
+                                    <div className="flex items-baseline gap-2">
+                                        <FiUsers className="text-zinc-500 shrink-0" size={16} aria-hidden />
+                                        <span className="text-md font-light text-zinc-500">Grupo</span>
+                                    </div>
+                                    <span className="block font-semibold mt-0.5">{bloque.grupo}</span>
                                 </div>
 
                                 <div>
-                                    <span className="block text-xs text-zinc-500">Nivel</span>
-                                    <span>{bloque.nivel}</span>
+                                    <div className="flex items-baseline gap-2">
+                                        <FiBarChart2 className="text-zinc-500 shrink-0" size={16} aria-hidden />
+                                        <span className="text-md font-light text-zinc-500">Nivel</span>
+                                    </div>
+                                    <span className="block font-semibold mt-0.5">{bloque.nivel}</span>
+                                </div>
+                                <div>
+                                    <div className="flex items-baseline gap-2">
+                                        <FiUser className="text-zinc-500 shrink-0" size={16} aria-hidden />
+                                        <span className="text-md font-light text-zinc-500">Instructor</span>
+                                    </div>
+                                    <span className="block font-semibold mt-0.5">{bloque.instructor}</span>
                                 </div>
                             </article>
                         ))}
