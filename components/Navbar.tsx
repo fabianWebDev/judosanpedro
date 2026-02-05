@@ -29,15 +29,15 @@ export default function Navbar({ locale }: Props) {
   };
 
   return (
-    <nav className="bg-zinc-100 border-b border-zinc-200">
+    <nav className="">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-5">
         {/* Logo */}
         <Link href={`/${locale}`} className="flex items-center gap-3">
           <Image
             src="/logo.png"
             alt="Judo San Pedro"
-            width={56}
-            height={56}
+            width={80}
+            height={80}
             priority
           />
           <span className="text-zinc-900 font-semibold text-lg tracking-tight">
@@ -55,7 +55,7 @@ export default function Navbar({ locale }: Props) {
                 key={link.href}
                 href={link.href}
                 className={`
-                  relative text-sm font-semibold tracking-wide
+                  relative text-md font-light tracking-wide
                   transition-colors
                   ${active
                     ? "text-zinc-900"

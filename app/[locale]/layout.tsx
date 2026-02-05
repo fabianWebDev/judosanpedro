@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
+import { Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { notFound } from "next/navigation";
 import { Locale, locales } from "@/data/i18n";
 import MainFrame from "@/components/layout/MainFrame";
+import Footer from "@/components/Footer";
 
 const baseUrl =
   process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
@@ -25,12 +27,13 @@ export default async function LocaleLayout({ children, params }: Props) {
   }
 
   return (
-    <html lang={locale} className="scroll-smooth light" suppressHydrationWarning>
-      <body>
+    <html lang={locale} className={`scroll-smooth`} suppressHydrationWarning>
+      <body className="font-sans antialiased">
         <Navbar locale={locale as Locale} />
         <MainFrame>
           {children}
         </MainFrame>
+        <Footer locale={locale as Locale} />
       </body>
     </html>
   );
