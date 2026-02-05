@@ -28,7 +28,7 @@ export default async function Hero({ params }: Props) {
                 />
                 <div className="absolute inset-0 flex flex-col items-center justify-center py-8 sm:py-10 md:py-12 lg:py-16">
                     <div className="flex w-[calc(100vw-2rem)] max-w-2xl flex-1 flex-col items-center justify-center text-center sm:w-full sm:px-10 md:px-12 lg:px-16">
-                        <h1 className="font-serif text-2xl font-light leading-tight tracking-[0.08em] text-white sm:text-5xl sm:tracking-[0.2em] md:text-6xl lg:text-7xl">
+                        <h1 className="font-serif text-2xl font-semibold leading-tight tracking-[0.08em] text-white sm:text-5xl sm:tracking-[0.2em] md:text-6xl lg:text-7xl">
                             Judo San Pedro
                         </h1>
                         <p className="mx-auto mt-4 max-w-md text-sm leading-relaxed text-neutral-300 sm:text-base md:text-lg">

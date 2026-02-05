@@ -16,16 +16,16 @@ export default function Horarios() {
             id="horarios"
             className="w-full max-w-7xl mx-auto px-4 py-6 sm:px-6 sm:py-8 md:px-8 md:py-10"
         >
-            <h1 className="text-3xl font-bold mb-6">Horarios</h1>
+            <h1 className="text-4xl font-bold mb-4">Horarios</h1>
 
-            <div className="flex gap-2 overflow-x-auto pb-2 mb-6">
+            <div className="flex gap-2 overflow-x-auto pb-2 mb-2 ">
                 {horarios.map(d => (
                     <button
                         key={d.dia}
                         onClick={() => setDiaActivo(d.dia)}
                         className={`
-              px-4 py-2 rounded-full whitespace-nowrap text-sm font-medium
-              transition
+              px-8 py-2 rounded-sm whitespace-nowrap text-md font-medium
+              transition cursor-pointer
               ${diaActivo === d.dia
                                 ? "bg-zinc-900 text-white"
                                 : "bg-zinc-100 text-zinc-700 hover:bg-zinc-200"
@@ -50,7 +50,7 @@ export default function Horarios() {
                         {dia.bloques.map((bloque, i) => (
                             <article
                                 key={i}
-                                className="border border-zinc-200 rounded-xl p-4 grid gap-2 sm:grid-cols-3"
+                                className="border border-zinc-200 rounded-sm p-4 grid gap-2 sm:grid-cols-3"
                             >
                                 <div>
                                     <span className="block text-xs text-zinc-500">Horario</span>

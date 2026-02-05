@@ -80,7 +80,7 @@ export default function Navbar({ locale }: Props) {
           aria-label="Abrir menú"
         >
           <svg
-            className="h-6 w-6"
+            className="h-8 w-8"
             fill="none"
             stroke="currentColor"
             strokeWidth={2}
@@ -98,13 +98,13 @@ export default function Navbar({ locale }: Props) {
       {/* Mobile menu */}
       {open && (
         <div className="md:hidden border-t border-zinc-200 bg-zinc-100">
-          <div className="flex flex-col p-4 gap-4">
+          <div className="flex flex-col p-4 gap-2">
             {links.map(link => (
               <Link
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="text-zinc-800 font-semibold"
+                className="text-zinc-800 font-light"
               >
                 {link.label}
               </Link>
