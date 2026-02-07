@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 import { Locale, locales } from "@/data/i18n";
 import MainFrame from "@/components/layout/MainFrame";
 import Footer from "@/components/Footer";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -40,6 +41,7 @@ export default async function LocaleLayout({ children, params }: Props) {
           {children}
         </MainFrame>
         <Footer locale={locale as Locale} />
+        <WhatsAppButton />
       </body>
     </html>
   );

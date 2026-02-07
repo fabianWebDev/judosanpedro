@@ -58,7 +58,7 @@ export default function Navbar({ locale }: Props) {
                   relative text-md font-light tracking-wide
                   transition-colors
                   ${active
-                    ? "text-zinc-900"
+                    ? "text-primary"
                     : "text-zinc-600 hover:text-zinc-900"
                   }
                 `}
@@ -66,7 +66,7 @@ export default function Navbar({ locale }: Props) {
                 {link.label}
 
                 {active && (
-                  <span className="absolute -bottom-1 left-0 h-[2px] w-full bg-zinc-900 rounded-full" />
+                  <span className="absolute -bottom-1 left-0 h-[2px] w-full bg-primary rounded-full" />
                 )}
               </Link>
             );

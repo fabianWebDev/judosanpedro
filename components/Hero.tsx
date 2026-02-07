@@ -12,13 +12,13 @@ export default async function Hero({ params }: Props) {
 
     return (
         <section className="relative w-full overflow-x-hidden bg-neutral-950">
-            <div className="relative aspect-[21/9] min-h-[280px] w-full sm:aspect-[3/1] sm:min-h-[320px] md:min-h-[380px] lg:min-h-[420px]">
+            <div className="relative aspect-[21/9] min-h-[220px] w-full sm:aspect-[3/1] sm:min-h-[320px] md:min-h-[380px] lg:min-h-[420px] ">
                 <Image
                     src="/hero.jpeg"
                     alt="Judo San Pedro - Dojo"
                     width={1400}
                     height={500}
-                    className="h-full w-full object-cover object-center"
+                    className="h-full w-full object-cover object-center grayscale-[75%] contrast-110 brightness-95"
                     priority
                     sizes="100vw"
                 />
@@ -34,12 +34,6 @@ export default async function Hero({ params }: Props) {
                         <p className="mx-auto mt-4 max-w-md text-sm leading-relaxed text-neutral-300 sm:text-base md:text-lg">
                             {t.heroText}
                         </p>
-                        <Link
-                            href={`/${locale}/about`}
-                            className="mt-8 inline-flex items-center justify-center rounded-sm border border-neutral-500/60 bg-transparent px-5 py-2.5 text-xs font-medium uppercase tracking-wider text-neutral-200 transition hover:border-amber-600/80 hover:bg-amber-950/30 hover:text-white sm:text-sm sm:tracking-[0.15em]"
-                        >
-                            {t.about}
-                        </Link>
                     </div>
                 </div>
             </div>
