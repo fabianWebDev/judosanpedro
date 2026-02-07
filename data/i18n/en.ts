@@ -1,7 +1,7 @@
 export const en = {
     ourSenseisTitle: "Our Senseis",
     senseis: "Senseis",
-    about: "About",
+    about: "About us",
     home: "Home",
     horarios: "Schedules",
     ubicacion: "Location",

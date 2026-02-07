@@ -34,7 +34,7 @@ export default async function AboutSenseis({ params }: Props) {
                     </p>
                     <Link
                         href={`/${locale}/senseis`}
-                        className="inline-flex items-center justify-center rounded-md px-4 py-2 bg-zinc-900 text-zinc-100 hover:opacity-90 transition w-fit mx-auto"
+                        className="inline-flex items-center justify-center rounded-full px-8 py-2 bg-primary text-white hover:opacity-90 transition w-fit mx-auto"
                     >
                         {t.commom.moreInfo}
                     </Link>

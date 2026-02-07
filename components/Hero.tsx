@@ -38,7 +38,7 @@ export default async function Hero({ params }: Props) {
                             href={`/${locale}/about`}
                             className="mt-8 inline-flex items-center justify-center rounded-sm border border-neutral-500/60 bg-transparent px-5 py-2.5 text-xs font-medium uppercase tracking-wider text-neutral-200 transition hover:border-amber-600/80 hover:bg-amber-950/30 hover:text-white sm:text-sm sm:tracking-[0.15em]"
                         >
-                            Sobre nosotros
+                            {t.about}
                         </Link>
                     </div>
                 </div>
