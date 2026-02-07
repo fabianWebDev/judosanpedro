@@ -29,7 +29,7 @@ export default async function AboutSenseis({ params }: Props) {
                     <h1 className="text-4xl font-bold mb-2 sm:text-2xl md:mb-10 md:text-3xl text-center">
                         {t.aboutSenseis}
                     </h1>
-                    <p className="text-zinc-900 mb-2 leading-relaxed text-center">
+                    <p className="text-zinc-600 mb-2 leading-relaxed text-center md:mb-4">
                         {t.aboutSenseisDescription}
                     </p>
                     <Link
