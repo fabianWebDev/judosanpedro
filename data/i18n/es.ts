@@ -8,7 +8,7 @@ export const es = {
     heroText: "Tradición y disciplina",
     aboutSenseis: "Sobre nuestros Senseis",
     aboutSenseisDescription:
-        "Nuestros senseis combinan años de experiencia en judo con una dedicación constante a la enseñanza. Transmiten los valores del dojo y guían a cada alumno en su camino marcial.",
+        "Nuestros senseis combinan años de experiencia en judo con una profunda dedicación a la enseñanza. Más allá de la técnica, transmiten los valores fundamentales del dojo — respeto, disciplina y perseverancia — y acompañan a cada alumno de forma cercana en su desarrollo físico, mental y personal a lo largo de su camino marcial.",
     footerText: "Judo San Pedro - Todos los derechos reservados",
     contactUs: "Contactanos",
     whyJudo: "¿Por qué Judo?",

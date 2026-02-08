@@ -9,7 +9,8 @@ export const senseis = [
         stats: [
             { label: "Años de experiencia", value: "22" },
             { label: "Títulos nacionales", value: "9" },
-            { label: "Medallas panamericanas", value: "2" },
+            { label: "Títulos internacionales", value: "2" },
+            { label: "Grado", value: "5º Dan" }
         ],
     },
     {
@@ -23,6 +24,7 @@ export const senseis = [
             { label: "Años de experiencia", value: "10" },
             { label: "Títulos nacionales", value: "5" },
             { label: "Títulos internacionales", value: "3" },
+            { label: "Grado", value: "4º Dan" }
         ],
     },
 ];
