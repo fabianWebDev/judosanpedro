@@ -18,7 +18,35 @@ export const senseis = [
         name: "Omar Vasconcelos",
         shortDescription: "Omar Vasconcelos es un judoka costarricense que ha sido campeón nacional en varias categorías.",
         fullDescription: "Omar Vasconcelos es un judoka costarricense que ha sido campeón nacional en varias categorías. Ha representado a Costa Rica en varios torneos internacionales y ha sido un referente para la juventud costarricense en el deporte.\n\nSu participación olímpica, respaldada por la Federación Internacional de Judo, refleja una trayectoria marcada por la disciplina, la perseverancia y el compromiso con la excelencia. Más allá del resultado competitivo, su presencia en el máximo escenario del deporte mundial representa el espíritu del judo: respeto, coraje y superación constante.\n\nHoy, su experiencia y legado inspiran a nuevas generaciones de judocas, transmitiendo no solo técnica, sino también los valores que hacen del judo un camino de formación integral.",
-        image: "/sensei_david.jpg",
+        image: "/judoka1.jpg",
+        badgeLabel: "Sensei Secundario",
+        stats: [
+            { label: "Años de experiencia", value: "10" },
+            { label: "Títulos nacionales", value: "5" },
+            { label: "Títulos internacionales", value: "3" },
+            { label: "Grado", value: "4º Dan" }
+        ],
+    },
+    {
+        slug: "jose-jimenez",
+        name: "Omar Vasconcelos",
+        shortDescription: "Omar Vasconcelos es un judoka costarricense que ha sido campeón nacional en varias categorías.",
+        fullDescription: "Omar Vasconcelos es un judoka costarricense que ha sido campeón nacional en varias categorías. Ha representado a Costa Rica en varios torneos internacionales y ha sido un referente para la juventud costarricense en el deporte.\n\nSu participación olímpica, respaldada por la Federación Internacional de Judo, refleja una trayectoria marcada por la disciplina, la perseverancia y el compromiso con la excelencia. Más allá del resultado competitivo, su presencia en el máximo escenario del deporte mundial representa el espíritu del judo: respeto, coraje y superación constante.\n\nHoy, su experiencia y legado inspiran a nuevas generaciones de judocas, transmitiendo no solo técnica, sino también los valores que hacen del judo un camino de formación integral.",
+        image: "/judoka2.jpg",
+        badgeLabel: "Sensei Secundario",
+        stats: [
+            { label: "Años de experiencia", value: "10" },
+            { label: "Títulos nacionales", value: "5" },
+            { label: "Títulos internacionales", value: "3" },
+            { label: "Grado", value: "4º Dan" }
+        ],
+    },
+    {
+        slug: "juan-lopez",
+        name: "Omar Vasconcelos",
+        shortDescription: "Omar Vasconcelos es un judoka costarricense que ha sido campeón nacional en varias categorías.",
+        fullDescription: "Omar Vasconcelos es un judoka costarricense que ha sido campeón nacional en varias categorías. Ha representado a Costa Rica en varios torneos internacionales y ha sido un referente para la juventud costarricense en el deporte.\n\nSu participación olímpica, respaldada por la Federación Internacional de Judo, refleja una trayectoria marcada por la disciplina, la perseverancia y el compromiso con la excelencia. Más allá del resultado competitivo, su presencia en el máximo escenario del deporte mundial representa el espíritu del judo: respeto, coraje y superación constante.\n\nHoy, su experiencia y legado inspiran a nuevas generaciones de judocas, transmitiendo no solo técnica, sino también los valores que hacen del judo un camino de formación integral.",
+        image: "/judoka3.jpg",
         badgeLabel: "Sensei Secundario",
         stats: [
             { label: "Años de experiencia", value: "10" },

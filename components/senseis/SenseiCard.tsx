@@ -20,49 +20,39 @@ export default function SenseiCard({
     slug: string;
     locale: string;
 }) {
-    const [mainStat, ...secondaryStats] = stats;
-
     return (
-        <article className="w-full max-w-sm overflow-hidden rounded-2xl bg-white shadow-lg ring-1 ring-zinc-200/80 transition hover:shadow-xl hover:ring-zinc-300">
-
-            {/* Imagen + Badge */}
-            <div className="relative aspect-square w-full overflow-hidden bg-zinc-100">
-                <span className="absolute left-3 top-3 z-10 rounded-full bg-zinc-900/90 px-3 py-1 text-xs font-medium text-zinc-100 backdrop-blur">
-                    {badgeLabel}
-                </span>
-
+        <article className="group relative w-full max-w-sm overflow-hidden rounded-2xl shadow-lg transition">
+            {/* Foto a pantalla completa */}
+            <div className="relative aspect-3/4 w-full overflow-hidden bg-zinc-100">
                 <Image
                     src={image}
                     alt={name}
                     width={500}
                     height={500}
-                    className="object-cover object-top transition duration-300 hover:scale-105"
+                    className="transition duration-300 group-hover:scale-105"
+                    sizes="(max-width: 768px) 200px, 300px"
                 />
-            </div>
 
-            {/* Texto */}
-            <div className="p-2 md:p-4">
-                <h2 className="mb-1 text-xl font-semibold tracking-tight text-zinc-900 line-clamp-1">
-                    {name}
-                </h2>
-
-                <p className="line-clamp-2 text-sm leading-relaxed text-zinc-600">
-                    {shortDescription}
-                </p>
-
-                <Link
-                    href={`/${locale}/senseis/${slug}`}
-                    className="
-                                mt-4 inline-flex w-full items-center justify-center
-                                rounded-xl bg-zinc-900 px-4 py-2
-                                text-sm font-medium text-white
-                                transition
-                                hover:bg-zinc-800
-                                focus:outline-none focus:ring-2 focus:ring-zinc-400 focus:ring-offset-2
-                                text-center"
+                <div
+                    className="absolute inset-x-0 bottom-0 flex flex-col justify-end p-4 pt-16 bg-gradient-to-t from-black/100 via-black/80 to-transparent"
+                    aria-hidden
                 >
-                    {seeMoreLabel}
-                </Link>
+                    <h2 className="mb-1 text-xl font-semibold tracking-tight text-white line-clamp-1">
+                        {name}
+                    </h2>
+                    <span className="mb-2 inline-flex w-fit rounded-full bg-primary px-3 py-0.5 text-xs font-medium text-white ">
+                        {badgeLabel}
+                    </span>
+                    <p className="line-clamp-3 text-sm leading-relaxed text-zinc-200 ">
+                        {shortDescription}
+                    </p>
+                    <Link
+                        href={`/${locale}/senseis/${slug}`}
+                        className="mt-2 md:mt-3 py-2 rounded-full bg-primary text-center text-md font-medium text-white transition hover:opacity-80 focus:outline-none"
+                    >
+                        {seeMoreLabel}
+                    </Link>
+                </div>
             </div>
         </article>
     );
