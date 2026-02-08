@@ -29,18 +29,18 @@ type Props = {
 
 const container = {
     hidden: { opacity: 0 },
-    visible: (i = 1) => ({
+    visible: {
         opacity: 1,
         transition: { staggerChildren: 0.2, delayChildren: 0.1 },
-    }),
+    },
 };
 
 const item = {
-    hidden: { opacity: 0, y: 24 },
+    hidden: { opacity: 0, x: -24 },
     visible: {
         opacity: 1,
-        y: 0,
-        transition: { duration: 0.4, ease: "easeOut" },
+        x: 0,
+        transition: { duration: 0.4, ease: "easeOut" as const },
     },
 };
 

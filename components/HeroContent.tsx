@@ -18,7 +18,7 @@ export default function HeroContent({ heroText }: Props) {
                 Judo San Pedro
             </motion.h1>
             <motion.p
-                className="mx-auto mt-4 max-w-md text-sm leading-relaxed text-neutral-300 sm:text-base md:text-lg"
+                className="mx-auto mt-4 max-w-md text-md leading-relaxed text-neutral-300 md:text-lg"
                 initial={{ opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
