@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Playfair_Display  } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { notFound } from "next/navigation";
@@ -12,6 +12,12 @@ const inter = Inter({
   subsets: ["latin"],
   weight: ["400", "600", "700"],
   variable: "--font-inter",
+});
+
+const playfairDisplay = Playfair_Display({
+  subsets: ["latin"],
+  weight: ["400", "600", "700"],
+  variable: "--font-playfair-display",
 });
 
 const baseUrl =
@@ -35,7 +41,7 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   return (
     <html lang={locale} className={`scroll-smooth`} suppressHydrationWarning>
-      <body className={`${inter.className} antialiased`}>
+      <body className={`${inter.variable} ${playfairDisplay.variable} font-sans antialiased`}>
         <Navbar locale={locale as Locale} />
         <MainFrame>
           {children}

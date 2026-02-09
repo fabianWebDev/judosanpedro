@@ -40,13 +40,13 @@ export default function Navbar({ locale }: Props) {
             height={80}
             priority
           />
-          <span className="text-zinc-900 font-semibold text-lg tracking-tight">
+          <span className="text-zinc-900 font-serif text-4xl font-semibold tracking-tight">
             Judo San Pedro
           </span>
         </Link>
 
-        {/* Desktop nav */}
-        <div className="hidden md:flex gap-8">
+        {/* Desktop nav (solo desde lg/1024px) */}
+        <div className="hidden lg:flex gap-4 lg:gap-8">
           {links.map(link => {
             const active = isActive(link.href);
 
@@ -73,10 +73,10 @@ export default function Navbar({ locale }: Props) {
           })}
         </div>
 
-        {/* Mobile button */}
+        {/* Mobile button (visible hasta lg: tablets y móvil) */}
         <button
           onClick={() => setOpen(!open)}
-          className="md:hidden text-zinc-900"
+          className="lg:hidden text-zinc-900"
           aria-label="Abrir menú"
         >
           <svg
@@ -95,9 +95,9 @@ export default function Navbar({ locale }: Props) {
         </button>
       </div>
 
-      {/* Mobile menu */}
+      {/* Mobile menu (visible hasta lg: tablets y móvil) */}
       {open && (
-        <div className="md:hidden border-t border-zinc-200 bg-zinc-100">
+        <div className="lg:hidden border-t border-zinc-200 bg-zinc-100">
           <div className="flex flex-col p-4 gap-2">
             {links.map(link => (
               <Link

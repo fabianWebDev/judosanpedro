@@ -64,7 +64,7 @@ export default async function SenseiPage({ params }: Props) {
     const t = i18n[locale as Locale];
 
     return (
-        <article className="mx-auto w-full max-w-4xl px-6 sm:px-6">
+        <article className="mx-auto w-full max-w-4xl px-4 sm:px-4">
             <Link
                 href={`/${locale}/senseis`}
                 className="mb-6 inline-flex items-center gap-1 text-sm font-medium text-zinc-500 transition-colors hover:text-primary"
@@ -94,9 +94,9 @@ export default async function SenseiPage({ params }: Props) {
                     </h1>
 
                     {sensei.stats.length > 0 && (
-                        <div className="mb-4 flex flex-wrap gap-x-2 gap-y-2 text-xs md:text-sm text-zinc-600 ">
+                        <div className="mb-4 flex flex-wrap gap-x-2 gap-y-2 text-xs md:text-sm">
                             {sensei.stats.map((stat) => (
-                                <span key={stat.label} className="border-primary border-2 rounded-full p-2 text-primary font-bold px-4">
+                                <span key={stat.label} className="border-primary border-2 rounded-full text-primary font-bold py-2 px-4">
                                     {stat.value} {stat.label.toLowerCase()}
                                 </span>
                             ))}

@@ -66,7 +66,7 @@ export default function WhyJudoCards({ title, cards }: Props) {
                     return (
                         <motion.article
                             key={key}
-                            className="px-4 py-2"
+                            className=""
                             variants={item}
                         >
                             <motion.div
