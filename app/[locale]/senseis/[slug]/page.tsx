@@ -73,8 +73,8 @@ export default async function SenseiPage({ params }: Props) {
                 <span>Senseis</span>
             </Link>
 
-            <div className="overflow-hidden md:grid md:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)]">
-                <div className="relative aspect-[4/3] w-full overflow-hidden bg-zinc-100 md:aspect-auto md:min-h-[320px]">
+            <div className="overflow-hidden md:grid md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1.2fr)] md:gap-8 md:items-stretch">
+                <div className="relative w-full aspect-[4/3] md:aspect-auto md:h-[600px] overflow-hidden rounded-lg bg-zinc-100">
                     {/* <span className="absolute left-4 top-4 z-10 rounded-full bg-zinc-900/90 px-3 py-1 text-xs font-medium text-zinc-100 backdrop-blur">
                         {sensei.badgeLabel}
                     </span> */}
@@ -87,7 +87,8 @@ export default async function SenseiPage({ params }: Props) {
                         priority
                     />
                 </div>
-                <div className="flex flex-col md:px-4 ">
+                <div className="h-full w-px bg-zinc-200 " aria-hidden />
+                <div className="flex flex-col md:px-0">
                     <h1 className="mt-2 md:mt-0 mb-2 md:mb-4 text-2xl font-semibold tracking-tight text-zinc-900 sm:text-3xl">
                         {sensei.name}
                     </h1>
@@ -102,7 +103,7 @@ export default async function SenseiPage({ params }: Props) {
                         </div>
                     )}
 
-                    <div className="whitespace-pre-line text-sm leading-relaxed text-zinc-600 sm:text-base">
+                    <div className="whitespace-normal md:whitespace-pre-line text-sm leading-relaxed text-zinc-600 sm:text-base">
                         {sensei.fullDescription}
                     </div>
                 </div>
