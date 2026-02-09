@@ -14,11 +14,11 @@ export const senseis = [
         ],
     },
     {
-        slug: "omar-vasconcelos",
-        name: "Omar Vasconcelos",
-        shortDescription: "Omar Vasconcelos es un judoka costarricense que ha sido campeón nacional en varias categorías.",
-        fullDescription: "Omar Vasconcelos es un judoka costarricense que ha sido campeón nacional en varias categorías. Ha representado a Costa Rica en varios torneos internacionales y ha sido un referente para la juventud costarricense en el deporte.\n\nSu participación olímpica, respaldada por la Federación Internacional de Judo, refleja una trayectoria marcada por la disciplina, la perseverancia y el compromiso con la excelencia. Más allá del resultado competitivo, su presencia en el máximo escenario del deporte mundial representa el espíritu del judo: respeto, coraje y superación constante.\n\nHoy, su experiencia y legado inspiran a nuevas generaciones de judocas, transmitiendo no solo técnica, sino también los valores que hacen del judo un camino de formación integral.",
-        image: "/judoka1.jpg",
+        slug: "toshihiko-koga",
+        name: "Toshihiko Koga",
+        shortDescription: "Toshihiko Koga es un judoka japonés que ha sido campeón nacional en varias categorías.",
+        fullDescription: "Toshihiko Koga es un judoka japonés que ha sido campeón nacional en varias categorías. Ha representado a Japón en varios torneos internacionales y ha sido un referente para la juventud japonesa en el deporte.\n\nSu participación olímpica, respaldada por la Federación Internacional de Judo, refleja una trayectoria marcada por la disciplina, la perseverancia y el compromiso con la excelencia. Más allá del resultado competitivo, su presencia en el máximo escenario del deporte mundial representa el espíritu del judo: respeto, coraje y superación constante.\n\nHoy, su experiencia y legado inspiran a nuevas generaciones de judocas, transmitiendo no solo técnica, sino también los valores que hacen del judo un camino de formación integral.",
+        image: "/koga.png",
         badgeLabel: "Sensei Secundario",
         stats: [
             { label: "Años de experiencia", value: "10" },
@@ -28,11 +28,11 @@ export const senseis = [
         ],
     },
     {
-        slug: "jose-jimenez",
-        name: "Omar Vasconcelos",
+        slug: "teddy-riner",
+        name: "Teddy Riner",
         shortDescription: "Omar Vasconcelos es un judoka costarricense que ha sido campeón nacional en varias categorías.",
         fullDescription: "Omar Vasconcelos es un judoka costarricense que ha sido campeón nacional en varias categorías. Ha representado a Costa Rica en varios torneos internacionales y ha sido un referente para la juventud costarricense en el deporte.\n\nSu participación olímpica, respaldada por la Federación Internacional de Judo, refleja una trayectoria marcada por la disciplina, la perseverancia y el compromiso con la excelencia. Más allá del resultado competitivo, su presencia en el máximo escenario del deporte mundial representa el espíritu del judo: respeto, coraje y superación constante.\n\nHoy, su experiencia y legado inspiran a nuevas generaciones de judocas, transmitiendo no solo técnica, sino también los valores que hacen del judo un camino de formación integral.",
-        image: "/judoka2.jpg",
+        image: "/teddy1.png",
         badgeLabel: "Sensei Secundario",
         stats: [
             { label: "Años de experiencia", value: "10" },
@@ -42,17 +42,17 @@ export const senseis = [
         ],
     },
     {
-        slug: "juan-lopez",
-        name: "Omar Vasconcelos",
-        shortDescription: "Omar Vasconcelos es un judoka costarricense que ha sido campeón nacional en varias categorías.",
-        fullDescription: "Omar Vasconcelos es un judoka costarricense que ha sido campeón nacional en varias categorías. Ha representado a Costa Rica en varios torneos internacionales y ha sido un referente para la juventud costarricense en el deporte.\n\nSu participación olímpica, respaldada por la Federación Internacional de Judo, refleja una trayectoria marcada por la disciplina, la perseverancia y el compromiso con la excelencia. Más allá del resultado competitivo, su presencia en el máximo escenario del deporte mundial representa el espíritu del judo: respeto, coraje y superación constante.\n\nHoy, su experiencia y legado inspiran a nuevas generaciones de judocas, transmitiendo no solo técnica, sino también los valores que hacen del judo un camino de formación integral.",
-        image: "/judoka3.jpg",
+        slug: "barbara-matic",
+        name: "Barbara Matic",
+        shortDescription: "Barbara Matic es una judoka croata que ha sido campeón nacional en varias categorías.",
+        fullDescription: "Barbara Matic es una judoka croata que ha sido campeón nacional en varias categorías. Ha representado a Croacia en varios torneos internacionales y ha sido un referente para la juventud croata en el deporte.\n\nSu participación olímpica, respaldada por la Federación Internacional de Judo, refleja una trayectoria marcada por la disciplina, la perseverancia y el compromiso con la excelencia. Más allá del resultado competitivo, su presencia en el máximo escenario del deporte mundial representa el espíritu del judo: respeto, coraje y superación constante.\n\nHoy, su experiencia y legado inspiran a nuevas generaciones de judocas, transmitiendo no solo técnica, sino también los valores que hacen del judo un camino de formación integral.",
+        image: "/matic.jpg",
         badgeLabel: "Sensei Secundario",
         stats: [
-            { label: "Años de experiencia", value: "10" },
-            { label: "Títulos nacionales", value: "5" },
-            { label: "Títulos internacionales", value: "3" },
-            { label: "Grado", value: "4º Dan" }
+            { label: "Años de experiencia", value: "20" },
+            { label: "Títulos nacionales", value: "10" },
+            { label: "Títulos internacionales", value: "5" },
+            { label: "Grado", value: "6º Dan" }
         ],
     },
 ];
