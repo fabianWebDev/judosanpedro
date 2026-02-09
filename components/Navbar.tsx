@@ -34,7 +34,7 @@ export default function Navbar({ locale }: Props) {
         {/* Logo */}
         <Link href={`/${locale}`} className="flex items-center gap-3">
           <Image
-            src="/logo.png"
+            src="/logo2.png"
             alt="Judo San Pedro"
             width={80}
             height={80}
