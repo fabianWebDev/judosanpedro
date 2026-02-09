@@ -3,39 +3,59 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { getSenseiBySlug } from "@/data/senseis/senseis";
-import { i18n, Locale } from "@/data/i18n";
-import { FiChevronLeft } from "react-icons/fi"
+import { i18n, Locale, locales } from "@/data/i18n";
+import { FiChevronLeft } from "react-icons/fi";
+
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://judosanpedro.com";
+
+function absoluteImageUrl(image: string): string {
+    return image.startsWith("http") ? image : `${baseUrl}${image}`;
+}
 
 export async function generateMetadata(
     { params }: { params: Promise<{ locale: string; slug: string }> }
 ): Promise<Metadata> {
-    const { slug } = await params;
+    const { locale: rawLocale, slug } = await params;
+    const locale = locales.includes(rawLocale as Locale) ? (rawLocale as Locale) : "es";
+    const t = i18n[locale];
     const sensei = getSenseiBySlug(slug);
 
     if (!sensei) {
         return {
-            title: "Sensei no encontrado",
+            title: `${t.senseiNotFoundTitle} | Judo San Pedro`,
         };
     }
 
-    const title = `${sensei.name} | Judo San Pedro`;
-    const rawDescription =
-        sensei.shortDescription || sensei.fullDescription;
+    const title = `${sensei.name}`;
+    const rawDescription = sensei.shortDescription || sensei.fullDescription;
     const description = rawDescription
         .replace(/\s+/g, " ")
         .trim()
         .slice(0, 160);
+    const canonicalPath = `/${locale}/senseis/${slug}`;
+    const canonicalUrl = `${baseUrl}${canonicalPath}`;
+    const imageUrl = absoluteImageUrl(sensei.image);
 
     return {
         title,
         description,
+        alternates: {
+            canonical: canonicalUrl,
+            languages: {
+                es: `${baseUrl}/es/senseis/${slug}`,
+                en: `${baseUrl}/en/senseis/${slug}`,
+            },
+        },
         openGraph: {
             title,
             description,
+            url: canonicalUrl,
+            siteName: "Judo San Pedro",
             type: "profile",
+            locale: locale === "es" ? "es_CR" : "en_US",
             images: [
                 {
-                    url: sensei.image,
+                    url: imageUrl,
                     width: 1200,
                     height: 630,
                     alt: sensei.name,
@@ -46,7 +66,7 @@ export async function generateMetadata(
             card: "summary_large_image",
             title,
             description,
-            images: [sensei.image],
+            images: [imageUrl],
         },
     };
 }
@@ -70,7 +90,7 @@ export default async function SenseiPage({ params }: Props) {
                 className="mb-6 inline-flex items-center gap-1 text-sm font-medium text-zinc-500 transition-colors hover:text-primary"
             >
                 <FiChevronLeft className="h-4 w-4" />
-                <span>Senseis</span>
+                <span>{t.senseis}</span>
             </Link>
 
             <div className="overflow-hidden md:grid md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1.2fr)] md:gap-8 md:items-stretch">

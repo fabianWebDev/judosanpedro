@@ -1,4 +1,3 @@
-import { i18n, Locale } from "@/data/i18n";
 import Hero from "@/components/Hero";
 import Horarios from "@/components/Horarios";
 import Location from "@/components/Locations";
@@ -10,15 +9,11 @@ type Props = {
 };
 
 export default async function Home({ params }: Props) {
-  const { locale } = await params;
-  const t = i18n[locale as Locale];
-
   return (
     <>
       <Hero params={params} />
       <WhyJudoSection params={params} />
       <AboutSenseis params={params} />
-      
       <Horarios />
       <Location />
     </>

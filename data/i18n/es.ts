@@ -9,6 +9,7 @@ export const es = {
     aboutSenseis: "Sobre nuestros Senseis",
     aboutSenseisDescription:
         "Nuestros senseis combinan años de experiencia en judo con una profunda dedicación a la enseñanza. Más allá de la técnica, transmiten los valores fundamentales del dojo — respeto, disciplina y perseverancia — y acompañan a cada alumno de forma cercana en su desarrollo físico, mental y personal a lo largo de su camino marcial.",
+    ogSenseisAlt: "Senseis de Judo San Pedro",
     footerText: "Judo San Pedro - Todos los derechos reservados",
     contactUs: "Contactanos",
     whyJudo: "¿Por qué Judo?",
@@ -34,4 +35,5 @@ export const es = {
         seeMore: "Ver más",
         seeLess: "Ver menos",
     },
+    senseiNotFoundTitle: "Sensei no encontrado",
 };
