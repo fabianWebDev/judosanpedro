@@ -27,7 +27,7 @@ export default function SenseiCardInfo({
             initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-20px" }}
-            transition={{ duration: 0.5, ease: "easeOut" }}
+            transition={{ duration: 0.8, ease: "easeOut" as const }}
         >
             <h2 className="mb-1 text-xl font-semibold tracking-tight text-white line-clamp-1">
                 {name}

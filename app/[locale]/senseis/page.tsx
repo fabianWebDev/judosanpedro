@@ -13,7 +13,7 @@ export default async function Senseis({ params }: Props) {
     return (
         <>
             <h1 className="text-4xl font-bold text-center mb-4 mt-2 md:mb-10 md:mt-4">{t.ourSenseisTitle}</h1>
-            <div className="grid grid-cols-1 gap-10 md:gap-6 lg:grid-cols-3 px-2 md:px-4">
+            <div className="grid grid-cols-1 gap-10 md:gap-6 lg:grid-cols-3 md:px-4">
                 {senseis.filter((s): s is NonNullable<typeof s> & { slug: string } => s != null && "slug" in s).map((sensei, index) => (
                     <SenseiCard
                         key={sensei.slug}

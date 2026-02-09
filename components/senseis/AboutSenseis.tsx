@@ -1,5 +1,5 @@
-import Link from "next/link";
 import Image from "next/image";
+import AboutSenseiInfo from "./AboutSenseiInfo";
 import { i18n, Locale } from "@/data/i18n";
 
 type Props = {
@@ -26,20 +26,12 @@ export default async function AboutSenseis({ params }: Props) {
                             />
                         </div>
                     </div>
-                    <div className="flex flex-col md:w-2/3">
-                        <h1 className="text-4xl font-bold mb-2 sm:text-2xl md:mb-10 md:text-3xl text-center">
-                            {t.aboutSenseis}
-                        </h1>
-                        <p className="text-zinc-600 mb-2 leading-relaxed text-center md:mb-4">
-                            {t.aboutSenseisDescription}
-                        </p>
-                        <Link
-                            href={`/${locale}/senseis`}
-                            className="inline-flex items-center justify-center rounded-full px-8 py-2 text-primary font-bold border border-primary border-2 hover:bg-primary hover:text-white transition w-fit mx-auto"
-                        >
-                            {t.commom.moreInfo}
-                        </Link>
-                    </div>
+                    <AboutSenseiInfo
+                        title={t.ourSenseisTitle}
+                        description={t.aboutSenseisDescription}
+                        linkLabel={t.commom.moreInfo}
+                        locale={locale}
+                    />
                 </div>
             </div>
         </section>

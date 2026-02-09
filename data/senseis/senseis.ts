@@ -10,7 +10,7 @@ export const senseis = [
             { label: "Años de experiencia", value: "22" },
             { label: "Títulos nacionales", value: "9" },
             { label: "Títulos internacionales", value: "2" },
-            { label: "Grado", value: "5º Dan" }
+            { label: "Grado", value: "6º Dan" },
         ],
     },
     {
