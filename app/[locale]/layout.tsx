@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display  } from "next/font/google";
+import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { notFound } from "next/navigation";
@@ -7,6 +7,41 @@ import { Locale, locales } from "@/data/i18n";
 import MainFrame from "@/components/layout/MainFrame";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://judosanpedro.com";
+
+export const metadata: Metadata = {
+  title: {
+    default: "Judo San Pedro - Dojo de Judo Tradicional en Costa Rica",
+    template: "%s | Judo San Pedro",
+  },
+  description:
+    "Clases de judo para niños y adultos en Costa Rica. Disciplina, respeto y comunidad.",
+  authors: [{ name: "Judo San Pedro" }],
+  openGraph: {
+    title: "Judo San Pedro",
+    description: "Judo San Pedro - Dojo de Judo Tradicional en Costa Rica.",
+    url: baseUrl,
+    siteName: "Judo San Pedro",
+    images: [
+      {
+        url: `${baseUrl}/logo.png`,
+        width: 1200,
+        height: 630,
+        alt: "Judo San Pedro",
+      },
+    ],
+    locale: "es_CR",
+    type: "website",
+  },
+  alternates: {
+    canonical: baseUrl,
+    languages: {
+      es: `${baseUrl}/es`,
+      en: `${baseUrl}/en`,
+    },
+  },
+};
 
 const inter = Inter({
   subsets: ["latin"],
@@ -19,13 +54,6 @@ const playfairDisplay = Playfair_Display({
   weight: ["400", "600", "700"],
   variable: "--font-playfair-display",
 });
-
-const baseUrl =
-  process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
-
-export const metadata: Metadata = {
-  metadataBase: new URL(baseUrl),
-};
 
 type Props = {
   children: React.ReactNode;

@@ -10,7 +10,7 @@ export default function Horarios() {
     const [diaActivo, setDiaActivo] = useState(horarios[0].dia);
 
     const dia = horarios.find(d => d.dia === diaActivo);
-    const phone = "50662819536";
+    const phone = process.env.NEXT_PUBLIC_PHONE || "50662819536";
     const message = "Hola, me gustaría más información sobre las clases de judo.";
 
     if (!dia) return null;

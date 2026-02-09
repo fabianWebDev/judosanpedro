@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function WhatsAppButton() {
     const message = "Hola, me gustaría más información sobre las clases de judo.";
-    const phone = "50688888888";
+    const phone = process.env.NEXT_PUBLIC_PHONE || "50662819536";
     return (
         <Link
             href={`https://wa.me/${phone}?text=${encodeURIComponent(message)}`}

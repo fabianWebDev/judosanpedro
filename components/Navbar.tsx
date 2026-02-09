@@ -17,7 +17,7 @@ export default function Navbar({ locale }: Props) {
 
   const links = [
     { href: `/${locale}`, label: t.home },
-    { href: `/${locale}/about`, label: t.about },
+    // { href: `/${locale}/about`, label: t.about },
     { href: `/${locale}/senseis`, label: t.senseis },
     { href: `/${locale}#horarios`, label: t.horarios },
     { href: `/${locale}#ubicacion`, label: t.ubicacion },
@@ -31,16 +31,17 @@ export default function Navbar({ locale }: Props) {
   return (
     <nav className="">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-5">
-        {/* Logo */}
         <Link href={`/${locale}`} className="flex items-center gap-3">
           <Image
-            src="/logo2.png"
+            src="/logo.png"
             alt="Judo San Pedro"
             width={80}
             height={80}
+            sizes="(max-width: 640px) 60px, 60px"
+            className="h-12 w-12 sm:h-20 sm:w-20"
             priority
           />
-          <span className="text-zinc-900 font-serif text-4xl font-semibold tracking-tight">
+          <span className="text-zinc-900 font-serif text-2xl md:text-4xl font-semibold tracking-tight">
             Judo San Pedro
           </span>
         </Link>
