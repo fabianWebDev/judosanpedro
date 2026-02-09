@@ -21,7 +21,7 @@ export default function SenseiCard({
     locale: string;
 }) {
     return (
-        <article className="group relative w-full max-w-sm overflow-hidden rounded-2xl shadow-lg transition">
+        <article className="group relative w-full max-w-sm overflow-hidden rounded-2xl shadow-md transition">
             <div className="relative aspect-3/4 w-full overflow-hidden bg-zinc-100">
                 <Image
                     src={image}

@@ -31,8 +31,8 @@ export default function Horarios() {
                         key={d.dia}
                         onClick={() => setDiaActivo(d.dia)}
                         className={`
-              px-8 py-2 rounded-sm whitespace-nowrap text-md font-medium
-              transition cursor-pointer
+              px-8 py-2 rounded-full whitespace-nowrap text-md 
+              transition cursor-pointer 
               ${diaActivo === d.dia
                                 ? "bg-primary text-white"
                                 : "bg-zinc-100 text-zinc-700 hover:bg-zinc-200"
@@ -57,7 +57,7 @@ export default function Horarios() {
                         {dia.bloques.map((bloque, i) => (
                             <article
                                 key={i}
-                                className="border border-zinc-200 rounded-sm p-4 grid gap-2 sm:grid-cols-4 "
+                                className="border border-primary rounded-xl md:rounded-full p-4 grid gap-2 sm:grid-cols-4 shadow-md"
                             >
                                 <div className="flex flex-col gap-1 md:items-center">
                                     <div className="flex items-baseline gap-2">
@@ -97,9 +97,9 @@ export default function Horarios() {
             <p className="text-zinc-600 mt-2 md:mt-4 text-xs">
                 Los horarios son sugeridos, y pueden ser modificados según la disponibilidad de los alumnos.
                 <br />
-                Si tienes alguna pregunta, no dudes en
+                Si tienes alguna pregunta, no dudes en&nbsp;
                 <Link href={`https://wa.me/${phone}?text=${encodeURIComponent(message)}`} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
-                    &nbsp;contactarnos
+                    contactarnos
                 </Link>.
                 <br />
             </p>
