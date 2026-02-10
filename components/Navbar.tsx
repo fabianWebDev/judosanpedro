@@ -30,7 +30,7 @@ export default function Navbar({ locale }: Props) {
 
   return (
     <nav className="">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-5">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-5 border-b border-zinc-200">
         <Link href={`/${locale}`} className="flex items-center gap-3">
           <Image
             src="/logo.png"
@@ -96,23 +96,47 @@ export default function Navbar({ locale }: Props) {
         </button>
       </div>
 
-      {/* Mobile menu (visible hasta lg: tablets y móvil) */}
-      {open && (
-        <div className="lg:hidden border-t border-zinc-200 bg-zinc-100">
-          <div className="flex flex-col p-4 gap-2">
-            {links.map(link => (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={() => setOpen(false)}
-                className="text-zinc-800 font-light"
-              >
-                {link.label}
-              </Link>
-            ))}
+      {/* Mobile menu (sobrio, estilo dojo) */}
+      <div
+        className={`lg:hidden overflow-hidden transition-[max-height,opacity] duration-200 ease-out ${
+          open ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <div className="">
+          <div className="mx-auto max-w-7xl px-4 py-3">
+            <div className="rounded-xl border border-zinc-200 bg-white">
+              <div className="flex flex-col divide-y divide-zinc-100">
+                {links.map(link => {
+                  const active = isActive(link.href);
+
+                  return (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      onClick={() => setOpen(false)}
+                      className={`flex items-center justify-between px-4 py-3 text-[15px] tracking-wide transition
+                        ${
+                          active
+                            ? "text-primary"
+                            : "text-zinc-800 hover:bg-zinc-50 active:bg-zinc-100"
+                        }`}
+                    >
+                      <span className="font-light">{link.label}</span>
+
+                      {/* Indicador sobrio */}
+                      <span
+                        className={`h-5 w-[3px] rounded-full transition ${
+                          active ? "bg-primary" : "bg-transparent"
+                        }`}
+                      />
+                    </Link>
+                  );
+                })}
+              </div>
+            </div>
           </div>
         </div>
-      )}
+      </div>
     </nav>
   );
 }

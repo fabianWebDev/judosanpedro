@@ -84,10 +84,10 @@ export default async function SenseiPage({ params }: Props) {
     const t = i18n[locale as Locale];
 
     return (
-        <article className="mx-auto w-full max-w-4xl px-4 sm:px-4">
+        <article className="mx-auto w-full max-w-4xl px-4 sm:px-4 mt-4">
             <Link
                 href={`/${locale}/senseis`}
-                className="mb-6 inline-flex items-center gap-1 text-sm font-medium text-zinc-500 transition-colors hover:text-primary"
+                className="mb-4 inline-flex items-center gap-1 text-sm font-medium text-zinc-500 transition-colors hover:text-primary"
             >
                 <FiChevronLeft className="h-4 w-4" />
                 <span>{t.senseis}</span>

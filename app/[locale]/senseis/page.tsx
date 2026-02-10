@@ -64,7 +64,7 @@ export default async function Senseis({ params }: Props) {
 
     return (
         <>
-            <div className="w-full max-w-7xl mx-auto px-4">
+            <div className="w-full max-w-7xl mx-auto px-4 mt-4">
                 <h1 className="text-4xl font-bold text-center mb-4 md:mb-10 md:mt-4">{t.ourSenseisTitle}</h1>
                 <div className="grid grid-cols-1 justify-items-center gap-10 sm:grid-cols-2 sm:justify-items-start md:gap-6 lg:grid-cols-3">
                     {senseis.filter((s): s is NonNullable<typeof s> & { slug: string } => s != null && "slug" in s).map((sensei, index) => (
