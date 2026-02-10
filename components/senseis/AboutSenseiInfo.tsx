@@ -43,7 +43,7 @@ export default function AboutSenseiInfo({
         >
             <motion.h1
                 variants={item}
-                className="text-4xl font-bold mb-2 sm:text-2xl md:mb-4 md:text-3xl text-center"
+                className="text-5xl font-serif font-bold mb-4 md:mb-6 text-center tracking-tight md:tracking-normal"
             >
                 {title}
             </motion.h1>

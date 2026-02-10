@@ -50,7 +50,7 @@ export default function WhyJudoCards({ title, cards }: Props) {
             id="why-judo"
             className="w-full max-w-7xl mx-auto px-4 py-6 mt-3 sm:px-6 sm:py-8 md:px-8 md:py-10 md:mt-10"
         >
-            <h2 className="text-4xl font-bold mb-2 md:mb-10 text-center">{title}</h2>
+            <h2 className="text-5xl font-serif font-bold mb-4 md:mb-12 text-center tracking-tight md:tracking-normal">{title}</h2>
 
             <motion.div
                 className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-6"

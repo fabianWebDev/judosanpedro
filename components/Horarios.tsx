@@ -20,7 +20,7 @@ export default function Horarios() {
             id="horarios"
             className="w-full max-w-7xl mx-auto px-4 py-6 mt-3 sm:px-6 sm:py-8 md:px-8 md:py-10 md:mt-10"
         >
-            <h1 className="text-4xl font-bold mb-2 md:mb-4">Horarios</h1>
+            <h1 className="text-5xl font-serif font-bold mb-4 md:mb-6 tracking-tight md:tracking-normal">Horarios</h1>
             <p className="text-zinc-600 mb-2 md:mb-4 text-sm md:text-base">
                 Contamos con clases todos los días de la semana y con distintos niveles, para que puedas entrenar a tu ritmo y según tu experiencia. No todos los niveles se imparten todos los días, lo que nos permite mantener grupos equilibrados y una enseñanza más personalizada.
             </p>

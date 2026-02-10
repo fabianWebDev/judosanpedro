@@ -1,7 +1,7 @@
 export default function Location() {
   return (
     <section id="ubicacion" className="w-full max-w-7xl mx-auto mt-3 px-4 py-6 sm:px-6 sm:py-8 md:px-8 md:py-10 ">
-      <h1 className="text-4xl font-bold mb-2 md:mb-4 sm:text-3xl sm:mb-4 md:text-4xl">
+      <h1 className="text-5xl font-serif font-bold mb-4 md:mb-6 tracking-tight md:tracking-normal">
         Ubicación
       </h1>
 
