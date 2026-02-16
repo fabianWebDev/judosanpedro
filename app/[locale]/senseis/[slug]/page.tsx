@@ -34,7 +34,7 @@ export async function generateMetadata(
         .slice(0, 160);
     const canonicalPath = `/${locale}/senseis/${slug}`;
     const canonicalUrl = `${baseUrl}${canonicalPath}`;
-    const imageUrl = absoluteImageUrl(sensei.image);
+    const imageUrl = absoluteImageUrl(sensei.image_1);
 
     return {
         title,
@@ -99,7 +99,7 @@ export default async function SenseiPage({ params }: Props) {
                         {sensei.badgeLabel}
                     </span> */}
                     <Image
-                        src={sensei.image}
+                        src={sensei.image_1}
                         alt={sensei.name}
                         fill
                         className="object-cover object-top rounded-lg"
