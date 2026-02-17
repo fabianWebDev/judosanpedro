@@ -95,9 +95,6 @@ export default async function SenseiPage({ params }: Props) {
 
             <div className="overflow-hidden md:grid md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1.2fr)] md:gap-8 md:items-stretch">
                 <div className="relative w-full aspect-[4/3] md:aspect-auto md:h-[600px] overflow-hidden rounded-lg bg-zinc-100">
-                    {/* <span className="absolute left-4 top-4 z-10 rounded-full bg-zinc-900/90 px-3 py-1 text-xs font-medium text-zinc-100 backdrop-blur">
-                        {sensei.badgeLabel}
-                    </span> */}
                     <Image
                         src={sensei.image_1}
                         alt={sensei.name}
@@ -117,7 +114,7 @@ export default async function SenseiPage({ params }: Props) {
                         <div className="mb-4 flex flex-wrap gap-x-2 gap-y-2 text-xs md:text-sm">
                             {sensei.stats.map((stat) => (
                                 <span key={stat.label} className="border-primary border-2 rounded-full text-primary font-bold py-2 px-4">
-                                    {stat.value} {stat.label.toLowerCase()}
+                                    {stat.value} {stat.label}
                                 </span>
                             ))}
                         </div>

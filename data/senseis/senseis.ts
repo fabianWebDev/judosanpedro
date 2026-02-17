@@ -12,7 +12,8 @@ export const senseis = [
             { label: "Títulos nacionales", value: "5+" },
             { label: "Títulos internacionales", value: "2" },
             { label: "Grado", value: "6º Dan" },
-            { label: "Competidor Olímpico", value: "Atenas 2004" },
+            { label: "Juegos Olímpicos Atenas 2004", value: "Participación" },
+            { label: "Campeonato Mundial Osaka 2003", value: "Participación" },
         ],
     },
     {
