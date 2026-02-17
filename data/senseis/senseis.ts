@@ -2,16 +2,17 @@ export const senseis = [
     {
         slug: "david-fernandez",
         name: "David Fernández",
-        shortDescription: "Referente del judo costarricense y representante olímpico en Atenas 2004, con amplia trayectoria nacional e internacional.",
-        fullDescription: "David Fernández Tercero es un referente del judo costarricense. Representó a Costa Rica en los Juegos Olímpicos de Atenas 2004, donde además tuvo el honor de portar la bandera nacional durante la ceremonia de inauguración.\n\nEn el plano internacional ha competido en Copas del Mundo (La Habana, Budapest, París), Grand Prix y Campeonatos Panamericanos. Obtuvo medalla de bronce en los Juegos Panamericanos de Río 2007 y plata en el Abierto Panamericano de Miami 2006. A nivel regional es múltiple campeón centroamericano y ha sido nueve veces campeón nacional absoluto.\n\nCinturón negro 5º dan desde 2018, hoy dedica su experiencia y liderazgo a la formación integral de jóvenes judocas, promoviendo la excelencia técnica, el respeto y los valores propios del judo.",
+        shortDescription: "Cinturón negro 6º Dan con 39 años de trayectoria en el judo, representante olímpico en Atenas 2004 y formador con más de dos décadas dedicadas a la enseñanza.",
+        fullDescription: "Inició su camino en el judo a los 14 años en la Universidad de Costa Rica. Actualmente es cinturón negro 6º Dan, con 39 años de experiencia en la práctica del judo y más de dos décadas dedicadas a la enseñanza.\n\nHa representado a Costa Rica en aproximadamente 20 torneos internacionales. Entre sus principales logros destacan campeonatos centroamericanos, títulos nacionales en múltiples ocasiones, el campeonato del San José State Judo Tournament en Estados Unidos, medalla de bronce en la Copa del Comité Olímpico Puertorriqueño y el subcampeonato del torneo clasificatorio a los Juegos Panamericanos 2003. Participó en los Juegos Panamericanos Santo Domingo 2003, en el Campeonato Mundial Osaka 2003 y alcanzó el máximo honor deportivo al representar al país en los Juegos Olímpicos Atenas 2004. Se retiró de la alta competencia en 2005.\n\nComo sensei, su misión es formar judokas íntegros, transmitiendo disciplina, respeto, autocontrol y perseverancia. Concibe el judo como una herramienta de transformación personal y social que trasciende la competencia, promoviendo valores que impactan positivamente dentro y fuera del tatami.",
         is_active: true,
         image_1: "/sensei_david.jpg",
         badgeLabel: "Sensei Principal",
         stats: [
-            { label: "Años de experiencia", value: "22" },
-            { label: "Títulos nacionales", value: "9" },
+            { label: "Años de experiencia", value: "39" },
+            { label: "Títulos nacionales", value: "5+" },
             { label: "Títulos internacionales", value: "2" },
             { label: "Grado", value: "6º Dan" },
+            { label: "Competidor Olímpico", value: "Atenas 2004" },
         ],
     },
     {

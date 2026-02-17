@@ -44,6 +44,13 @@ export default function Horarios() {
                 ))}
             </div>
 
+            {!dia.is_active && (
+                <p className="text-amber-700 bg-amber-50 border border-amber-200 rounded-lg px-4 py-3 text-sm md:text-base font-medium mb-4">
+                    Clase en modalidad intermitente. Para más información, <Link href={`https://wa.me/${phone}?text=${encodeURIComponent(message)}`} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">contáctanos</Link>.
+                    <br />
+                </p>
+            )}
+
             <section className="space-y-4">
                 <AnimatePresence mode="wait">
                     <motion.section
@@ -57,7 +64,7 @@ export default function Horarios() {
                         {dia.bloques.map((bloque, i) => (
                             <article
                                 key={i}
-                                className="border border-primary rounded-xl md:rounded-full p-4 grid gap-2 sm:grid-cols-4 shadow-md"
+                                className="border border-primary rounded-xl md:rounded-full p-4 grid gap-2 sm:grid-cols-4 shadow-sm"
                             >
                                 <div className="flex flex-col gap-1 md:items-center">
                                     <div className="flex items-baseline gap-2">
@@ -94,15 +101,20 @@ export default function Horarios() {
                     </motion.section>
                 </AnimatePresence>
             </section>
-            <p className="text-zinc-600 mt-2 md:mt-4 text-xs">
-                Los horarios son sugeridos, y pueden ser modificados según la disponibilidad de los alumnos.
+            <p className="text-zinc-600 mt-2 text-xs">
+                Los horarios son sugeridos y pueden ajustarse según la disponibilidad de los alumnos.
                 <br />
-                Si tienes alguna pregunta, no dudes en&nbsp;
-                <Link href={`https://wa.me/${phone}?text=${encodeURIComponent(message)}`} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                Si tienes alguna consulta, no dudes en{" "}
+                <Link
+                    href={`https://wa.me/${phone}?text=${encodeURIComponent(message)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary hover:underline"
+                >
                     contactarnos
                 </Link>.
-                <br />
             </p>
+
         </main>
     );
 }
