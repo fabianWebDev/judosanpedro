@@ -35,7 +35,7 @@ export default function SenseiCardInfo({
             <span className="mb-2 inline-flex w-fit rounded-full bg-primary px-3 py-0.5 text-xs font-medium text-white ">
                 {badgeLabel}
             </span>
-            <p className="line-clamp-3 text-sm leading-relaxed text-zinc-200 ">
+            <p className="line-clamp-4 text-sm leading-relaxed text-zinc-200 ">
                 {shortDescription}
             </p>
             <Link

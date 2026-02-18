@@ -31,6 +31,20 @@ export const senseis = [
         ],
     },
     {
+        slug: "alonso-morales",
+        name: "Alonso Morales",
+        shortDescription: "Sensei con profundo espíritu de servicio, enfocado en la formación de ciudadanos íntegros. Cuenta con experiencia en trabajo con niños, promoviendo un aprendizaje lúdico que prioriza el desarrollo de habilidades motrices y socioemocionales por encima de la técnica y la competencia en etapas tempranas.",
+        fullDescription: "Cinturón negro Sho Dan con 13 años de práctica en judo, ha desarrollado su camino dentro de la disciplina combinando experiencia competitiva y vocación formativa. Durante cinco años formó parte del CCDR de Montes de Oca, fortaleciendo su compromiso con el desarrollo deportivo y comunitario.\n\nEs Diseñador Gráfico graduado de la Universidad Latina y actualmente se encuentra finalizando la Licenciatura en Diseño Publicitario. Su formación profesional complementa su labor en el dojo, aportando creatividad, comunicación efectiva y una visión estructurada en los procesos de enseñanza.\n\nSe caracteriza por una metodología sólida en el trabajo con niños, priorizando el aprendizaje progresivo, el respeto y la disciplina en un entorno seguro y motivador. Además, cuenta con conocimientos en el manejo de población con Trastorno del Espectro Autista (T.E.A.), promoviendo una enseñanza inclusiva y adaptada a las necesidades individuales de cada estudiante.\n\nEs fiel creyente de que el judo es para todos y que representa un estilo de vida más que un deporte. Considera que los principios y analogías que transmite esta disciplina deben aplicarse a la vida cotidiana, como una herramienta para formar mejores personas y construir una sociedad más respetuosa y equilibrada.",
+        is_active: true,
+        image_1: "/alonso_1.png",
+        badgeLabel: "Sensei asistente",
+        stats: [
+            { label: "Grado", value: "1º Dan" },
+            { label: "Años de experiencia", value: "13" },
+            { label: "Títulos nacionales", value: "2" },
+        ],
+    },
+    {
         slug: "ronald-castro",
         name: "Ronald Castro",
         shortDescription: "Sensei con amplia trayectoria en judo, orientado a la formación técnica estructurada y al fortalecimiento de bases sólidas.",
