@@ -12,7 +12,7 @@ export const horarios = [
         is_active: true,
         bloques: [
             { hora: "5:30 – 6:40 pm", grupo: "Infantil", nivel: "Principiante", instructor: "Sensei Alonso" },
-            { hora: "6:30 – 8:30 pm", grupo: "Adultos", nivel: "Principiante", instructor: "Sensei Carlos" },
+            { hora: "6:30 – 8:30 pm", grupo: "Adultos", nivel: "Principiante", instructor: "Sensei David" },
         ],
     },
     {
@@ -25,9 +25,9 @@ export const horarios = [
     },
     {
         dia: "Jueves",
-        is_active: false,
+        is_active: true,
         bloques: [
-            { hora: "6:30 – 8:30 pm", grupo: "Adultos", nivel: "Principiante", instructor: "Sensei Omar" },
+            { hora: "6:30 – 8:30 pm", grupo: "Adultos", nivel: "Principiante", instructor: "Sensei Carlos" },
         ],
     },
     {
