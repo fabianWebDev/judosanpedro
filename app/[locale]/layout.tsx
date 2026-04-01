@@ -23,14 +23,6 @@ export const metadata: Metadata = {
     description: "Judo San Pedro - Dojo de Judo Tradicional en Costa Rica.",
     url: baseUrl,
     siteName: "Judo San Pedro",
-    images: [
-      {
-        url: `${baseUrl}/logo.png`,
-        width: 1200,
-        height: 630,
-        alt: "Judo San Pedro",
-      },
-    ],
     locale: "es_CR",
     type: "website",
   },
