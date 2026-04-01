@@ -33,7 +33,7 @@ export default function Navbar({ locale }: Props) {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-5 border-b border-zinc-200">
         <Link href={`/${locale}`} className="flex items-center gap-3">
           <Image
-            src="/logo.png"
+            src="/logo.svg"
             alt="Judo San Pedro"
             width={80}
             height={80}

@@ -41,6 +41,9 @@ export const metadata: Metadata = {
       en: `${baseUrl}/en`,
     },
   },
+  icons: {
+    icon: "/favicon.svg",
+  }
 };
 
 const inter = Inter({
