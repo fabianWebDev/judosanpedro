@@ -22,7 +22,7 @@ export default function Horarios() {
         >
             <h1 className="text-5xl font-serif font-bold mb-4 md:mb-6 tracking-tight md:tracking-normal">Horarios</h1>
             <p className="text-zinc-600 mb-2 md:mb-4 text-sm md:text-base">
-                Contamos con clases todos los días de la semana y con distintos niveles, para que puedas entrenar a tu ritmo y según tu experiencia. No todos los niveles se imparten todos los días, lo que nos permite mantener grupos equilibrados y una enseñanza más personalizada.
+                Contamos con clases de lunes a viernes y con distintos niveles, para que puedas entrenar a tu ritmo y según tu experiencia. No todos los niveles se imparten todos los días, lo que nos permite mantener grupos equilibrados y una enseñanza más personalizada.
             </p>
             <hr className="h-px my-2 md:my-6 bg-zinc-200 border-0" />
             <div className="flex gap-2 overflow-x-auto pb-2 mb-2 ">
